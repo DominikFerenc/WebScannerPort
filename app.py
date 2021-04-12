@@ -3,8 +3,8 @@ import subprocess
 from socket import gethostbyname
 import platform
 
-windows_template_folder = r"C:\Users\Dominik\PycharmProjects\WebLocalScanner\templates"
-linux_template_folder = "/home/dferenc/PycharmProjects/webscanner/templates"
+windows_template_folder = r"WebLocalScanner\templates"
+linux_template_folder = "webscanner/templates"
 #app = Flask(__name__, template_folder=windows_template_folder)
 app = Flask(__name__, template_folder=linux_template_folder)
 
