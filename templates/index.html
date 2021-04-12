@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Web scanner</title>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/blockinput.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/validatorIP.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/form.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/alertmessage.js') }}"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    </head>
+    <body id='web'>
+        <div class="forms">
+            <form id="ip_form"  autocomplete="off">
+                <h1 class="title_form">Open Ports Web Scanner</h1>
+                <p>
+                    <input type="text" class='input_text' id='input_ip' placeholder="IP Address"/>
+                    <i id='icon'></i>
+                    <button id='btn' class="btn btn1" type="submit" value="Submit">send</button>
+                </p>
+                <p id='info'></p>
+            </form>
+            <form method="POST" name='ports_form' id="ports_form">
+                <p><input type="number" class="rounded-input" id="lowest_input" placeholder="Lowest Port" name = "lowest_port" disabled="disabled" /></p>
+                <p><input type="number" class="rounded-input" id="maximum_input" placeholder="Maximum Port" name = "maximum_port" disabled="disabled" /></p>
+                <button type="submit" id='btn_2' form='ports_form' value="Submit" disabled="disabled">klik!</button>
+            </form>
+        </div>
+    
+            <p class="error_notification" role="alert">Ip is correct<a class="close_btn"></a></p>
+            <p class="good_notification" role="alert">Ip is correct<a class="close_btn" id='close_btn'></a></p>
+         
+        <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='css/style.css') }}">
+    </body>
+</html> 
